@@ -1,15 +1,21 @@
-
+version: 0.2
 
 phases:
   install:
     commands:
+      - echo Installing Angular
       - npm install -g @angular/cli
+      - echo Install
       - npm install
+      - echo build
       - ng build
   build:
     commands:
       - ng build
-      - npm test
+  post_build:
+    commands:
+      - echo Build completed
+      
 artifacts:
   files:
     - '**/*'
