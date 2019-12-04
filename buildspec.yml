@@ -7,12 +7,9 @@ phases:
       docker: 18
       
     commands:
-      - echo Installing Angular
       - npm install -g @angular/cli
-      - echo Install
       - npm install
-      - echo build
-      - ng build
+      
   build:
     commands:
       - ng build
