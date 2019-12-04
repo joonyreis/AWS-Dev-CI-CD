@@ -13,6 +13,7 @@ phases:
   build:
     commands:
       - ng build
+      - npm test
   post_build:
     commands:
       - echo Build completed
