@@ -1,0 +1,15 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - npm install -g @angular/cli
+      - npm install
+      - ng build
+  build:
+    commands:
+      - ng build
+      - npm test
+artifacts:
+  files:
+    - '**/*'
