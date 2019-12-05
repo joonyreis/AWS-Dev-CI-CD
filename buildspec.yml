@@ -17,7 +17,7 @@ phases:
       #- protractor conf.js
   post_build:
     commands:
-      - Completo .-.
+      #- echo oi
       
 artifacts:
   files:
