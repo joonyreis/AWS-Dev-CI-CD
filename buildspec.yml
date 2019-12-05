@@ -9,9 +9,6 @@ phases:
     commands:
       - npm install -g @angular/cli
       - npm install
-      - npm install -g protractor
-      - webdriver-manager update
-      
       
   build:
     commands:
@@ -20,8 +17,8 @@ phases:
       #- protractor conf.js
   post_build:
     commands:
-      - echo Build completed
+      - Completo .-.
       
 artifacts:
   files:
-    - dist/testAWSGitCICD/
+    - dist/testAWSGitCICD/**
