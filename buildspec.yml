@@ -16,8 +16,8 @@ phases:
   build:
     commands:
       - ng build
-      - webdriver-manager start
-      - protractor conf.js
+      #- webdriver-manager start
+      #- protractor conf.js
   post_build:
     commands:
       - echo Build completed
