@@ -15,7 +15,7 @@ phases:
       
   build:
     commands:
-      - ng build
+      - ng build --prod --aot false --build-optimizer=false
       #- webdriver-manager start
       #- protractor conf.js
   post_build:
@@ -24,4 +24,4 @@ phases:
       
 artifacts:
   files:
-    - '**/*'
+    - dist/testAWSGitCICD/**/*
