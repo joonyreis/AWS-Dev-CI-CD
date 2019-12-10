@@ -12,11 +12,8 @@ phases:
       
   build:
     commands:
-      - ng build
+      - ng build --prod --aot false --build-optimizer=false
   post_build:
     commands:
-      - echo Build completed
+      - aws s3 sync ./dist/testAWSGitCICD s3://testecicdcanada --acl 'public-read' --delete
       
-artifacts:
-  files:
-    - '**/*'
