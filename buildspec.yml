@@ -9,6 +9,7 @@ phases:
     commands:
       - npm install -g @angular/cli
       - npm install
+      - ng e2e
       
   build:
     commands:
