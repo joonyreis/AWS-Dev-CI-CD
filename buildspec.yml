@@ -16,5 +16,5 @@ phases:
 
   post_build:
     commands:
-      - aws s3 sync ./dist/testAWSGitCICD s3://cicdAngularTest --acl 'public-read' --delete
+      - aws s3 sync ./dist/testAWSGitCICD s3://cicdangulartest --acl 'public-read' --delete
       
