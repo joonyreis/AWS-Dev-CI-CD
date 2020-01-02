@@ -1,22 +1,32 @@
 version: 0.2
 
 phases:
+  # Comandos de instalação
   install:
-  
+    # Versão da docker 
     runtime-versions:
       docker: 18
       
+    # Comandos de configuração de ambiente
     commands:
       - npm install -g @angular/cli
       - npm install
       - ng build
       - ng e2e
-      
+  
+  # Comandos de execução de build
   build:
+    # Comando para build de produção
     commands:
       - ng build --prod --aot false --build-optimizer=false
 
+  # Comando executado após os comandos de build
   post_build:
+    # Comando para copiar os arquivos gerados do build 
+    # Caminho './dist/testAWSGitCICD' para o S3 's3://cicdangulartest'
+    # --acl é a permissão de acesso 
+    # public-read é o comando que permite a leitura dos arquivos
+    # --delete é o comando para excluir os arquivos anteriores contidos no S3
     commands:
       - aws s3 sync ./dist/testAWSGitCICD s3://cicdangulartest --acl 'public-read' --delete
       
