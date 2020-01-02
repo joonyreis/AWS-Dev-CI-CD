@@ -12,7 +12,7 @@ phases:
       - npm install -g @angular/cli
       - npm install
       - ng build
-      - ng e2e
+      #- ng e2e
   
   # Comandos de execução de build
   build:
