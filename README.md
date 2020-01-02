@@ -1,6 +1,8 @@
 # AWS-Dev-CI-CD
 Projeto de teste de integração com aws para entregas continuas e deploy 
 
+![Alt Text](https://github.com/joonyreis/AWS-Dev-CI-CD/blob/master/Bit%20Codebuild%20S3.png)
+
 
 # TestAWSGitCICD
 
